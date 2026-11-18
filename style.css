@@ -1,0 +1,154 @@
+
+/* ACTIVITY 1 - BASIC PAGE STYLING */
+
+h1 {
+    color: #ffffff;
+    background-color: #3a3a3a;
+}
+
+/* ACTIVITY 3 - SECTION E */
+
+h2 {
+    color: #36454F;
+    font-size: 1.5rem;
+}
+
+.intro {
+    background-color: #eeeeee;
+    color: #222222;
+    padding: 15px;
+}
+
+/* ACTIVITY 4 - SECTION B */
+
+.navbar {
+    display: flex;
+    background-color: #3a3a3a;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+}
+
+/* ACTIVITY 4 - SECTION C */
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+}
+
+.nav-link:hover {
+    background-color: #9E1B32;
+    border-radius: 4px;
+}
+
+.active {
+    border-bottom: 3px solid #9E1B32;
+}
+
+/* ACTIVITY 5 - SECTION C */
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        padding: 12px 16px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ACTIVITY 6 - SECTION B */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 16px;
+}
+
+/* ACTIVITY 6 - SECTION C */
+
+.project-card {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* ACTIVITY 7 - SECTION C */
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 480px;
+    padding: 16px;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+    padding: 10px;
+    border: 2px solid #999999;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* ACTIVITY 8 - SECTION A */
+
+a:focus,
+button:focus {
+    outline: 3px solid #9E1B32;
+    outline-offset: 2px;
+}
+
+/* FORM ACCESSIBILITY */
+
+#contactForm input:focus,
+#contactForm select:focus,
+#contactForm textarea:focus {
+    outline: 3px solid #9E1B32;
+    outline-offset: 2px;
+    border-color: #9E1B32;
+}
+
+#contactForm button {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #9E1B32;
+}
+
+/* ACTIVITY 8 - SECTION C: SKIP LINK */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 0;
+}

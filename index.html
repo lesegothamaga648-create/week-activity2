@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THAMAGA LESEGO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ACTIVITY 8: SKIP LINK -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- HEADER AND NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main">
+
+        <h1>THAMAGA LESEGO</h1>
+
+        <p>Hi everyone! My name is Thamaga Lesego. I am a new candidate who is passionate about IT.</p>
+
+        <p>I am learning web development and developing my skills in creating websites.</p>
+
+        <a href="#">Visit my profile</a>
+
+        <!-- ABOUT ME -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <p class="intro">I am a Systems Development learner at Metanoia.</p>
+
+            <ol>
+                <li>Improve my HTML skills</li>
+                <li>Learn CSS</li>
+                <li>Learn JavaScript</li>
+            </ol>
+
+            <h2>My Skills</h2>
+
+            <ul>
+                <li>HTML</li>
+                <li>Python</li>
+                <li>Cyber Security</li>
+            </ul>
+        </section>
+
+        <!-- PROFILE IMAGE -->
+        <img src="images/photo.jpg" alt="Photograph of Thamaga Lesego, representing the learner's personal bio page">
+
+        <!-- PROJECTS -->
+        <section class="projects-grid" id="projectsGrid"></section>
+
+        <!-- CONTACT FORM -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form id="contactForm">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required minlength="2">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic">
+                    <option value="general">General question</option>
+                    <option value="project">Project idea</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+
+            </form>
+
+<p id="formMessage" role="status"></p>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 Thamaga Lesego. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
