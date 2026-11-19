@@ -1,17 +1,30 @@
 
-/* ACTIVITY 1 - BASIC PAGE STYLING */
+/* =========================================
+   ACTIVITY 1 - BASIC PAGE STYLING
+========================================= */
+
+body {
+    background-color: #E5E5E5;
+    color: #292929;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
 
 h1 {
     color: #ffffff;
     background-color: #3a3a3a;
+    padding: 20px;
 }
-
-/* ACTIVITY 3 - SECTION E */
 
 h2 {
     color: #36454F;
     font-size: 1.5rem;
 }
+
+
+/* =========================================
+   ACTIVITY 3 - SECTION E
+========================================= */
 
 .intro {
     background-color: #eeeeee;
@@ -19,7 +32,11 @@ h2 {
     padding: 15px;
 }
 
-/* ACTIVITY 4 - SECTION B */
+
+/* =========================================
+   ACTIVITY 4 - SECTION B
+   NAVIGATION AND FLEXBOX
+========================================= */
 
 .navbar {
     display: flex;
@@ -32,7 +49,11 @@ h2 {
     top: 0;
 }
 
-/* ACTIVITY 4 - SECTION C */
+
+/* =========================================
+   ACTIVITY 4 - SECTION C
+   NAVIGATION LINKS
+========================================= */
 
 .nav-link {
     color: #ffffff;
@@ -50,9 +71,14 @@ h2 {
     border-bottom: 3px solid #9E1B32;
 }
 
-/* ACTIVITY 5 - SECTION C */
+
+/* =========================================
+   ACTIVITY 5 - SECTION C
+   RESPONSIVE DESIGN
+========================================= */
 
 @media (max-width: 600px) {
+
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -66,9 +92,14 @@ h2 {
     h1 {
         font-size: 1.5rem;
     }
+
 }
 
-/* ACTIVITY 6 - SECTION B */
+
+/* =========================================
+   ACTIVITY 6 - SECTION B
+   CSS GRID
+========================================= */
 
 .projects-grid {
     display: grid;
@@ -77,7 +108,11 @@ h2 {
     padding: 16px;
 }
 
-/* ACTIVITY 6 - SECTION C */
+
+/* =========================================
+   ACTIVITY 6 - SECTION C
+   PROJECT CARDS
+========================================= */
 
 .project-card {
     background-color: #3a3a3a;
@@ -87,7 +122,11 @@ h2 {
     text-align: center;
 }
 
-/* ACTIVITY 7 - SECTION C */
+
+/* =========================================
+   ACTIVITY 7 - SECTION C
+   CONTACT FORM
+========================================= */
 
 #contactForm {
     display: flex;
@@ -106,13 +145,40 @@ h2 {
     font-size: 1rem;
 }
 
-/* ACTIVITY 8 - SECTION A */
+
+/* =========================================
+   ACTIVITY 7 - STRETCH TASKS
+   RADIO BUTTONS AND CHECKBOX
+========================================= */
+
+#contactForm fieldset {
+    padding: 15px;
+    border: 1px solid #999999;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.choice input {
+    width: auto;
+}
+
+
+/* =========================================
+   ACTIVITY 8 - SECTION A
+   KEYBOARD ACCESSIBILITY
+========================================= */
 
 a:focus,
 button:focus {
     outline: 3px solid #9E1B32;
     outline-offset: 2px;
 }
+
 
 /* FORM ACCESSIBILITY */
 
@@ -123,6 +189,11 @@ button:focus {
     outline-offset: 2px;
     border-color: #9E1B32;
 }
+
+
+/* =========================================
+   ACTIVITY 7 - FORM BUTTON
+========================================= */
 
 #contactForm button {
     background-color: #3a3a3a;
@@ -137,7 +208,11 @@ button:focus {
     background-color: #9E1B32;
 }
 
-/* ACTIVITY 8 - SECTION C: SKIP LINK */
+
+/* =========================================
+   ACTIVITY 8 - SECTION C
+   SKIP LINK
+========================================= */
 
 .skip-link {
     position: absolute;
@@ -151,4 +226,200 @@ button:focus {
 
 .skip-link:focus {
     top: 0;
+}
+
+
+/* =========================================
+   ACTIVITY 9 - PROJECT FILTER BUTTONS
+========================================= */
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    padding: 16px;
+}
+
+.filter-btn {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #9E1B32;
+}
+
+
+/* =========================================
+   ACTIVITY 9 - CHARACTER COUNTER
+========================================= */
+
+#charCounter {
+    text-align: right;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ACTIVITY 9 - FORM MESSAGE
+========================================= */
+
+#formMessage {
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+/* =========================================
+   ACTIVITY 9 - DARK MODE BUTTON
+========================================= */
+
+.theme-toggle {
+    background-color: #9E1B32;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.theme-toggle:hover {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+
+/* =========================================
+   ACTIVITY 9 - DARK MODE
+========================================= */
+
+body.dark-mode {
+    background-color: #202124;
+    color: #ffffff;
+}
+
+/* Header, main, footer and sections */
+
+body.dark-mode header,
+body.dark-mode main,
+body.dark-mode footer,
+body.dark-mode section {
+    background-color: #202124;
+    color: #ffffff;
+}
+
+/* Headings */
+
+body.dark-mode h1 {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #ffffff;
+}
+
+/* Introduction */
+
+body.dark-mode .intro {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+/* Navigation */
+
+body.dark-mode .navbar {
+    background-color: #111111;
+}
+
+body.dark-mode .nav-link {
+    color: #ffffff;
+}
+
+/* Project cards */
+
+body.dark-mode .project-card {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+/* Filter buttons */
+
+body.dark-mode .filter-btn {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+body.dark-mode .filter-btn.active,
+body.dark-mode .filter-btn:hover {
+    background-color: #9E1B32;
+}
+
+/* Contact form */
+
+body.dark-mode #contactForm input,
+body.dark-mode #contactForm select,
+body.dark-mode #contactForm textarea {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border-color: #888888;
+}
+
+/* Labels and fieldset */
+
+body.dark-mode #contactForm label,
+body.dark-mode #contactForm legend,
+body.dark-mode #contactForm fieldset {
+    color: #ffffff;
+}
+
+/* Form button */
+
+body.dark-mode #contactForm button {
+    background-color: #9E1B32;
+    color: #ffffff;
+}
+
+/* Dark mode toggle */
+
+body.dark-mode .theme-toggle {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+
+/* =========================================
+   ACTIVITY 5 AND 9 - SMALL SCREENS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        padding: 12px 16px;
+        width: 100%;
+    }
+
+    .theme-toggle {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .filter-buttons {
+        flex-wrap: wrap;
+    }
+
 }

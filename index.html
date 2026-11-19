@@ -1,43 +1,72 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>THAMAGA LESEGO</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- ACTIVITY 9: CONNECT JAVASCRIPT -->
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
     <!-- ACTIVITY 8: SKIP LINK -->
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- HEADER AND NAVIGATION -->
-    <header>
-        <nav class="navbar">
-            <a href="#" class="nav-link active">Home</a>
+    <!-- ACTIVITY 4 AND 9: NAVIGATION AND DARK MODE BUTTON -->
+    <header id="home">
+
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="#home" class="nav-link active">Home</a>
+
             <a href="#about" class="nav-link">About</a>
+
             <a href="#projects" class="nav-link">Projects</a>
+
             <a href="#contact" class="nav-link">Contact</a>
+
+            <!-- ACTIVITY 9: DARK MODE STRETCH TASK -->
+            <button type="button" id="themeToggle" class="theme-toggle">
+                Switch to Dark Mode
+            </button>
+
         </nav>
-    </header>
 
-    <!-- MAIN CONTENT -->
-    <main id="main">
-
+        <!-- ACTIVITY 1 AND 2: MAIN HEADING -->
         <h1>THAMAGA LESEGO</h1>
 
-        <p>Hi everyone! My name is Thamaga Lesego. I am a new candidate who is passionate about IT.</p>
+        <p>
+            Hi everyone! My name is Thamaga Lesego.
+            I am a new candidate who is passionate about IT.
+        </p>
 
-        <p>I am learning web development and developing my skills in creating websites.</p>
+        <p>
+            I am learning web development and developing my skills
+            in creating websites.
+        </p>
 
-        <a href="#">Visit my profile</a>
+        <a href="#about">Visit my profile</a>
 
-        <!-- ABOUT ME -->
+    </header>
+
+    <!-- ACTIVITY 8: MAIN CONTENT LANDMARK -->
+    <main id="main">
+
+        <!-- ACTIVITY 1, 2 AND 3: ABOUT ME -->
         <section id="about">
+
             <h2>About Me</h2>
 
-            <p class="intro">I am a Systems Development learner at Metanoia.</p>
+            <p class="intro">
+                I am a Systems Development learner at Metanoia.
+            </p>
 
             <ol>
                 <li>Improve my HTML skills</li>
@@ -52,52 +81,192 @@
                 <li>Python</li>
                 <li>Cyber Security</li>
             </ul>
+
+            <!-- ACTIVITY 2 AND 8: PROFILE IMAGE AND ALT TEXT -->
+            <img
+                src="images/photo.jpg"
+                alt="Photograph of Thamaga Lesego, representing the learner's personal bio page"
+                class="profile-image"
+            >
+
         </section>
 
-        <!-- PROFILE IMAGE -->
-        <img src="images/photo.jpg" alt="Photograph of Thamaga Lesego, representing the learner's personal bio page">
+        <!-- ACTIVITY 6 AND 9: PROJECTS -->
+        <section id="projects">
 
-        <!-- PROJECTS -->
-        <section class="projects-grid" id="projectsGrid"></section>
+            <h2>My Projects</h2>
 
-        <!-- CONTACT FORM -->
+            <p>
+                These project cards are generated automatically
+                using JavaScript.
+            </p>
+
+            <!-- ACTIVITY 9: PROJECT FILTER STRETCH TASK -->
+            <div class="filter-buttons">
+
+                <button
+                    type="button"
+                    class="filter-btn active"
+                    data-filter="All">
+                    All
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="HTML">
+                    HTML
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="CSS">
+                    CSS
+                </button>
+
+            </div>
+
+            <!-- ACTIVITY 9: JAVASCRIPT GENERATES PROJECT CARDS -->
+            <div class="projects-grid" id="projectsGrid"></div>
+
+        </section>
+
+        <!-- ACTIVITY 7: CONTACT FORM -->
         <section id="contact">
+
             <h2>Contact Me</h2>
+
+            <p>Use the form below to send me a message.</p>
 
             <form id="contactForm">
 
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required minlength="2">
+                <label for="name">Full Name:</label>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="you@example.com">
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    minlength="2"
+                >
 
-                <label for="topic">Topic</label>
-                <select id="topic" name="topic">
+                <label for="email">Email Address:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                >
+
+                <label for="topic">Topic:</label>
+
+                <select id="topic" name="topic" required>
+
+                    <option value="">Select a topic</option>
                     <option value="general">General question</option>
                     <option value="project">Project idea</option>
                     <option value="feedback">Feedback</option>
+
                 </select>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="message">Your Message:</label>
 
-                <button type="submit">Send</button>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    minlength="10"
+                    maxlength="500"
+                    required
+                ></textarea>
+
+                <!-- ACTIVITY 9: CHARACTER COUNTER -->
+                <p id="charCounter">
+                    0 / 500 characters
+                </p>
+
+                <!-- ACTIVITY 7: PHONE NUMBER -->
+                <label for="phone">Phone Number:</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    pattern="[0-9-]+"
+                    title="Enter digits and dashes only."
+                >
+
+                <!-- ACTIVITY 7: RADIO BUTTONS -->
+                <fieldset>
+
+                    <legend>Preferred reply method:</legend>
+
+                    <div class="choice">
+
+                        <input
+                            type="radio"
+                            id="replyEmail"
+                            name="preferredReply"
+                            value="Email"
+                            checked
+                        >
+
+                        <label for="replyEmail">Email</label>
+
+                    </div>
+
+                    <div class="choice">
+
+                        <input
+                            type="radio"
+                            id="replyPhone"
+                            name="preferredReply"
+                            value="Phone"
+                        >
+
+                        <label for="replyPhone">Phone</label>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- ACTIVITY 7: CHECKBOX -->
+                <div class="choice">
+
+                    <input
+                        type="checkbox"
+                        id="copyMessage"
+                        name="copyMessage"
+                    >
+
+                    <label for="copyMessage">
+                        Send me a copy of this message
+                    </label>
+
+                </div>
+
+                <button type="submit">Send Message</button>
 
             </form>
 
-<p id="formMessage" role="status"></p>
+            <!-- ACTIVITY 9: JAVASCRIPT FORM MESSAGE -->
+            <p id="formMessage" role="status"></p>
 
         </section>
 
-        <!-- FOOTER -->
-        <footer>
-            <p>&copy; 2026 Thamaga Lesego. All rights reserved.</p>
-        </footer>
-
     </main>
 
-<script src="script.js"></script>
+    <!-- ACTIVITY 1 AND 4: FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Thamaga Lesego. All rights reserved.
+        </p>
+
+    </footer>
 
 </body>
 </html>
